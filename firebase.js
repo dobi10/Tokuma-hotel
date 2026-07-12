@@ -1,53 +1,42 @@
-// Import Firebase
+// ==============================
+// Tokuma Hotel - Firebase Config
+// ==============================
 
+// Firebase App
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
+// Firebase Firestore
+import {
+  getFirestore
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+// Firebase Authentication
+import {
+  getAuth
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
+// Firebase Storage (for future image uploads)
+import {
+  getStorage
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
 
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
-
-
-// Tokuma Hotel Firebase Configuration
-
+// Firebase Configuration
 const firebaseConfig = {
-
-  apiKey: "AIzaSyAdt5kLb_mHzvzCtZFpmjysFJmsO48Y2B4",
-
-  authDomain: "tokuma-d0931.firebaseapp.com",
-
-  projectId: "tokuma-d0931",
-
-  storageBucket: "tokuma-d0931.firebasestorage.app",
-
-  messagingSenderId: "407451225160",
-
-  appId: "1:407451225160:web:9d92d6ddd0bb81b5625c7d"
-
+  apiKey: "AIzaSyDhsqdbW9C4e_wQ1XCkjghmlUnugCV1S-s",
+  authDomain: "batu-hotel-f00fd.firebaseapp.com",
+  projectId: "batu-hotel-f00fd",
+  storageBucket: "batu-hotel-f00fd.firebasestorage.app",
+  messagingSenderId: "60513617208",
+  appId: "1:60513617208:web:1d5e09432b26591944edcd"
 };
 
-
-
-// Start Firebase
-
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-
-
-// Connect Firestore Database
-
+// Initialize Firebase services
 const db = getFirestore(app);
-
-
-
-// Connect Authentication
-
 const auth = getAuth(app);
+const storage = getStorage(app);
 
-
-
-// Export for other files
-
-export { db, auth };
+// Export services
+export { app, db, auth, storage };
