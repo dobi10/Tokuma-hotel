@@ -2,8 +2,13 @@
 <html>
 
 <head>
-<title>Tokuma Hotel Booking</title>
+
+<title>Tokuma Hotel | Booking</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 
@@ -12,9 +17,41 @@
 
 <header>
 
-<h1>Tokuma Hotel Booking</h1>
+<h1>Tokuma Hotel</h1>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="rooms.html">Rooms</a>
+
+<a href="about.html">About</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
 
 </header>
+
+
+
+<section class="hero">
+
+
+<h2>Book Your Room</h2>
+
+
+<p>
+Reserve your comfortable stay at Tokuma Hotel, Bale Robe.
+</p>
+
+
+</section>
+
 
 
 <section>
@@ -23,60 +60,148 @@
 <form id="bookingForm">
 
 
+<h2>Booking Information</h2>
+
+
 <label>
 Full Name
 </label>
 
-<input type="text" id="name" required>
+<input 
+type="text" 
+id="name" 
+placeholder="Enter your full name"
+required>
+
 
 
 <label>
 Phone Number
 </label>
 
-<input type="tel" id="phone" required>
+<input 
+type="tel" 
+id="phone" 
+placeholder="09XXXXXXXX"
+required>
+
 
 
 <label>
 Choose Room
 </label>
 
+
 <select id="room">
 
+
 <option>
-Standard Room - 1000 ETB
+Standard Room - 1000 ETB / Night
 </option>
+
 
 </select>
 
 
-<label>
-Check In Date
-</label>
-
-<input type="date" id="checkin" required>
-
 
 <label>
-Check Out Date
+Check-in Date
 </label>
 
-<input type="date" id="checkout" required>
+
+<input 
+type="date" 
+id="checkin"
+required>
 
 
-<button class="button" type="submit">
+
+<label>
+Check-out Date
+</label>
+
+
+<input 
+type="date" 
+id="checkout"
+required>
+
+
+
+<label>
+Payment Method
+</label>
+
+
+<select id="payment">
+
+
+<option>
+Telebirr
+</option>
+
+
+<option>
+CBE Birr
+</option>
+
+
+<option>
+Pay at Hotel
+</option>
+
+
+</select>
+
+
+
+<p>
+
+Payment will be confirmed by Tokuma Hotel after booking.
+
+</p>
+
+
+
+<button 
+class="button"
+type="submit">
+
 Send Booking
+
 </button>
+
 
 
 </form>
 
 
+
 </section>
 
 
-<script src="js/app.js"></script>
+
+
+<footer>
+
+<p>
+Tokuma Hotel | Bale Robe
+</p>
+
+<p>
+Phone: 0951014243
+</p>
+
+</footer>
+
+
+
+
+
+<script type="module" src="js/app.js"></script>
+
 
 </body>
 
-</html>
+
+  </html>
