@@ -1,12 +1,15 @@
-document.getElementById("bookingForm")
-.addEventListener("submit",function(e){
+const bookingForm = document.getElementById("bookingForm");
 
-e.preventDefault();
+if (bookingForm) {
 
+    bookingForm.addEventListener("submit", function(e){
 
-alert(
-"Your booking request was sent to Tokuma Hotel. We will contact you soon."
-);
+        e.preventDefault();
 
+        alert(
+        "Your booking request was sent to Tokuma Hotel. We will contact you soon."
+        );
 
-});
+    });
+
+}
