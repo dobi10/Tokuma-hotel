@@ -1,16 +1,17 @@
-// Firebase imports
+// Import Firebase
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
-import { 
-    getFirestore 
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-import { 
-    getAuth 
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 
-// Your Firebase configuration
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+
+
+// Tokuma Hotel Firebase Configuration
+
 const firebaseConfig = {
 
   apiKey: "AIzaSyAdt5kLb_mHzvzCtZFpmjysFJmsO48Y2B4",
@@ -28,21 +29,25 @@ const firebaseConfig = {
 };
 
 
-// Initialize Firebase
+
+// Start Firebase
 
 const app = initializeApp(firebaseConfig);
 
 
-// Create database connection
+
+// Connect Firestore Database
 
 const db = getFirestore(app);
 
 
-// Create authentication connection
+
+// Connect Authentication
 
 const auth = getAuth(app);
 
 
-// Export so other files can use Firebase
+
+// Export for other files
 
 export { db, auth };
